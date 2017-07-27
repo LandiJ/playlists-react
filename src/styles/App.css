@@ -1,5 +1,11 @@
+body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxawoEZvtq4G9E84d9ebR9lQAot_EDsmzaN4N45LUr9l7Rjqwp);
+  background-position: center;
+}
+
 .App {
   text-align: center;
+  height: "600px",
 }
 
 .App-logo {
@@ -19,6 +25,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+let textStyle = {
+  color: "white",
+  fontSize: "40px",
+  textShadow: "5px 5px 5px black"
+};
+
 export default class PlayListForm extends Component {
   constructor(props) {
     super(props);
@@ -74,31 +80,56 @@ export default class PlayListForm extends Component {
     return (
       <div>
         <form onSubmit={this.addToList}>
-          <input
-            type="text"
-            name="userName"
-            onChange={this.handleUserNameInput}
-            value={this.state.userName}
-          />
-          <input
-            type="text"
-            name="songTitle"
-            onChange={this.handleSongTitleInput}
-            value={this.state.songTitle}
-          />
-          <input
-            type="text"
-            name="songArtist"
-            onChange={this.handleSongArtistInput}
-            value={this.state.songArtist}
-          />
-          <input
-            type="text"
-            name="songNotes"
-            onChange={this.handleSongNotesInput}
-            value={this.state.songNotes}
-          />
-          <input type="submit" />
+          <div className="form-group">
+            <label style={textStyle}>Username:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="userName"
+              onChange={this.handleUserNameInput}
+              value={this.state.userName}
+            />
+          </div>
+          <div className="form-group">
+            <label style={textStyle}>Song Title</label>
+            <input
+              className="form-control"
+              type="text"
+              name="songTitle"
+              onChange={this.handleSongTitleInput}
+              value={this.state.songTitle}
+            />
+          </div>
+          <div className="form-group">
+            <label style={textStyle}>Artist/Band Name</label>
+            <input
+              className="form-control"
+              type="text"
+              name="songArtist"
+              onChange={this.handleSongArtistInput}
+              value={this.state.songArtist}
+            />
+          </div>
+          <div className="form-group">
+            {/*<input
+              className="form-control"
+              type="text"
+              name="songNotes"
+              onChange={this.handleSongNotesInput}
+              value={this.state.songNotes}
+            />*/}
+            <label style={textStyle}>Notes:</label>
+            <textarea
+              className="form-control"
+              rows="5"
+              id="songnotes"
+              name="songNotes"
+              onChange={this.handleSongNotesInput}
+              value={this.state.songNotes}
+            />
+          </div>
+
+          <input className="btn btn-primary" type="submit" />
         </form>
 
       </div>

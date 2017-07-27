@@ -14,7 +14,7 @@ class PlayList extends Component {
       })
       .then(data => {
         this.setState({ songs: data });
-        console.log("HERE", data);
+        console.log("HERE");
       });
   };
   componentWillMount() {
@@ -32,7 +32,9 @@ class PlayList extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.fetchData}>Update List</button>
+        <button className="btn btn-primary" onClick={this.fetchData}>
+          Update List
+        </button>
         <PlayListItem songs={this.state.songs} />
       </div>
     );
